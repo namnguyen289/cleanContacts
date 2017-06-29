@@ -14,3 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.app-root{
+    background: color($colors,font,contrast) url(../../assets/bg/bg.jpg) repeat-y center top;
+    background-blend-mode: darken;
+    background-size: auto 200%;
+    .content {
+        background: color($colors,font,contrast) url(../../assets/bg/bg.jpg) repeat-y center top;
+        background-attachment: scroll;
+        background-blend-mode: darken;
+        background-size: auto 200%;
+    }
+    *{
+        background-color: transparent !important;
+        color: color($colors,font,base);
+    }
+}
