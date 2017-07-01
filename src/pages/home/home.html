@@ -7,11 +7,12 @@
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
   <ion-list>
-    <ion-item *ngFor="let item of contactList" >
-      <ion-avatar item-start>
+    <ion-item *ngFor="let item of contactList" (click)="showDetail($event,item)">
+      <!--<ion-avatar item-start>
         <img src="{{item.id}}" >
-      </ion-avatar>
+      </ion-avatar>-->
       <h2>{{item.displayName}}</h2>
+      <p *ngFor="let phone of item.phoneNumbers" >{{phone.pref?phone.value:""}}</p>
     </ion-item>
   </ion-list>
 </ion-content>

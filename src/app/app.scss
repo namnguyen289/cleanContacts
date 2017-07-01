@@ -15,17 +15,24 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .app-root{
-    background: color($colors,font,contrast) url(../../assets/bg/bg.jpg) repeat-y center top;
-    background-blend-mode: darken;
-    background-size: auto 200%;
+    .toolbar-background,.tabbar,
+    .list, .item  {
+        background-color: transparent !important;        
+    }
+    .toolbar-title{
+        color: color($colors,font,base);
+    }
     .content {
-        background: color($colors,font,contrast) url(../../assets/bg/bg.jpg) repeat-y center top;
+        background: transparent url(../../assets/bg/bg.jpg) repeat-y center top ;
         background-attachment: scroll;
         background-blend-mode: darken;
-        background-size: auto 200%;
-    }
-    *{
-        background-color: transparent !important;
+        background-size: 100%;
         color: color($colors,font,base);
+    }
+    .list-header,.item{        
+        color: white
+    }
+    .item-inner .label {
+        padding-left: 1em
     }
 }

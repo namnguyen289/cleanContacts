@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{selectedItem.displayName}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{selectedItem.displayName}}">
+      </ion-avatar>
+      <h2>{{selectedItem.displayName}}</h2>
+      <p>{{selectedItem.nickname}}</p>
+    </ion-item>
+    <ion-list-header>
+      Phone Numbers
+    </ion-list-header>
+    <ion-item *ngFor="let item of selectedItem.phoneNumbers">
+      {{item.type}}
+      <ion-note item-end>
+        {{item.value}}
+      </ion-note>
+    </ion-item>
+    <ion-list-header>
+      Emails
+    </ion-list-header>
+    <ion-item *ngFor="let item of selectedItem.emails">
+      {{item.type}}
+      <ion-note item-end>
+        {{item.value}}
+      </ion-note>
+    </ion-item>
+    <ion-list-header>
+      Organizations
+    </ion-list-header>
+    <ion-item *ngFor="let item of selectedItem.organizations">
+      {{item.type}}
+      <ion-note item-end>
+        {{item.name}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="dismiss()">
+    <span ion-text>Cancel</span>
+  </button>
+</ion-content>
