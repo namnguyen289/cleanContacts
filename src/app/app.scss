@@ -16,14 +16,14 @@
 // automatically applied to the <body> element in the app.
 .app-root{
     .toolbar-background,.tabbar,
-    .list, .item  {
+    .item  {
         background-color: transparent !important;        
     }
     .toolbar-title{
         color: color($colors,font,base);
     }
     .content {
-        background: transparent url(../../assets/bg/bg.jpg) repeat-y center top ;
+        background: white url(../assets/bg/bg.jpg) repeat-y center top ;
         background-attachment: scroll;
         background-blend-mode: darken;
         background-size: 100%;
